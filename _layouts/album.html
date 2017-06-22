@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
+
 <section class="jumbotron text-center">
-      <div class="container">
-        {{ content }}
-      </div>
-    </section>
+  <div class="container">
+    {{ content }}
+  </div>
+</section>
+
+{% if page.gallery %}
+    {% include gallery.html %}
+{% endif %}
