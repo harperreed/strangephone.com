@@ -27,6 +27,10 @@ I will affix the sticker to phone and take a photo of it and post it to the [str
 
 I would like to keep a constant stream of stickers and art going. Please help! 
 
+### Thanks
+
+Thanks for [Shawnimals](https://www.instagram.com/shawnimals/), [T-Money](https://www.instagram.com/tmoneydelarue/) and [Lauren Asta](https://www.instagram.com/lauren_asta/) for making our garage awesome. Also, talking about street art with these folks helped solidify my plans to make this payphone strange.  You should commission some work from them. 
+
 ----
 
 I have been thinking about this project since I registered the strangephone domain in January 2006. I am excited that I have a place to put my wonderful payphone and place for y'all to put stickers. 
