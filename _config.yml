@@ -37,3 +37,5 @@ instagram_user_id: 5631423697
 instagram_client_id: 1b9ca331fe614565ba44d293d9b967ee
 instagram_access_token:  5631423697.1677ed0.0ab6dab4dfd3488ca8d840740c268ff9
 newone: 5631423697.1677ed0.0ab6dab4dfd3488ca8d840740c268ff9
+
+exclude:    ['CNAME','Makefile','Gemfile','Gemfile.lock','galleries.html',Makefile','s3_website.yml','_config.example.yml','s3_website.example.yml','README.md','.gitignore', 'node_modules']
