@@ -6,9 +6,6 @@ layout: page
 gallery: true
 ---
 
-
-# Strange Phone
-
 Strange Phone is a sticker vessel. Send us your stickers and we will stick it on the phone and post a photo of the sticker to our insta!
 
 You can call Strange Phone by dialing [+81 3 4589 4757](tel:+81345894757). Go for it. 
