@@ -38,6 +38,7 @@ feed.run();
 
 
 jQuery(document).ready(function(){
+  if(feed.hasNext()) {
   $(window).scroll(function() {
     $("#loader").removeClass('hidden');
     if($(window).scrollTop() + $(window).height() >= $(document).height()) {
@@ -45,6 +46,7 @@ jQuery(document).ready(function(){
       feed.next();
     }
   });
+}
 
 
 
