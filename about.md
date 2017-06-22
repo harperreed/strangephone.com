@@ -29,4 +29,6 @@ I would like to keep a constant stream of stickers and art going. Please help!
 
 ----
 
+I have been thinking about this project since I registered the strangephone domain in January 2006. I am excited that I have a place to put my wonderful payphone and place for y'all to put stickers. 
+
 You can learn more about the tech that powers the payphone [here](/tech). And you can see some of our other street and public art [here](/art). For more about Harper, check out his [twitter](http://twitter.com/harper) or [homepage](http://harperreed.com).
