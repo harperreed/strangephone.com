@@ -13,22 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Strange Phone
+email: art@strangephone.com
+phone: "+81 3 4589 4757"
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  a simple, but strange, payphone
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://strangephone.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: strangephone
+
 
 # Build settings
 markdown: kramdown
-theme: minima
+
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+instagram_username: strange_phone 
+instagram_user_id: 5631423697
+instagram_client_id: 1b9ca331fe614565ba44d293d9b967ee
+instagram_access_token:  5631423697.1677ed0.0ab6dab4dfd3488ca8d840740c268ff9
+newone: 5631423697.1677ed0.0ab6dab4dfd3488ca8d840740c268ff9

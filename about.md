@@ -2,14 +2,31 @@
 layout: page
 title: About
 permalink: /about/
+menu: True
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<img src="/assets/begin.jpg" width="200" align="right" />
+Strange Phone is a simple and normal project from Harper Reed. It is a payphone that is permenantly installed in his backyard. You can call this payphone by dialing: [+81 3 4589 4757](tel:+81345894757). This is a Tokyo, JP number. Tolls will most likely apply. 
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
+If you call within operating hours, maybe someone will answer the phone. You never know. 
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+The real reason for having a payphone is to create a blank (ish) vessel for putting stickers and other forms of street art onto. As a young person (when payphones were real), I was always excited to stumble across a drawn upon [label 228](https://en.wikipedia.org/wiki/Label_228) with some nice art on it. 
+
+I wanted to create a object that artists could contribute to via stickers, slaps, and other labels. Whether it be a character or a tag - the strange phone is a home. 
+
+### Contribute
+
+If you want to contribute a sticker to the phone, send it to: 
+
+    Strange Phone c/o Harper Reed
+    1658 N Milwaukee ave
+    #519
+    Chicago, IL 60647
+
+I will affix the sticker to phone and take a photo of it and post it to the [strange_phone](http://instagram.com/strange_phone) insta. Obviously, I will use my own discretion on whether it fits, etc. I imagine most pieces will be awesome. 
+
+I would like to keep a constant stream of stickers and art going. Please help! 
+
+----
+
+You can learn more about the tech that powers the payphone [here](/tech). And you can see some of our other street and public art [here](/art). For more about Harper, check out his [twitter](http://twitter.com/harper) or [homepage](http://harperreed.com).
