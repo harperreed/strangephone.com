@@ -5,7 +5,7 @@ permalink: /about/
 menu: True
 ---
 
-<img src="/assets/begin.jpg" width="200" align="right" />
+<img src="/assets/begin.jpg" class="hidden-sm-down" width="200" align="right" />
 Strange Phone is a simple and normal project from Harper Reed. It is a payphone that is permenantly installed in his backyard. You can call this payphone by dialing: [+81 3 4589 4757](tel:+81345894757). This is a Tokyo, JP number. Tolls will most likely apply. 
 
 If you call within operating hours, maybe someone will answer the phone. You never know. 
