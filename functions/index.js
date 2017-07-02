@@ -22,7 +22,7 @@ exports.incoming = functions.https.onRequest((request, response) => {
   //var chicago_tz    = moment.tz("Pacific/Honolulu");
 
   var current_hour =  chicago_tz.format("H")
-  var destination = "payphone@sipsorcery.com" //"harper@sipsorcery.com";
+  var destination = functions.config().twilio.sip.destination;
   var ring = false;
 
   var en_response = "Hello. Strange phone is currently turned off. Please try again tomorrow";
