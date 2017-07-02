@@ -19,7 +19,7 @@ exports.incoming = functions.https.onRequest((request, response) => {
   var twiml = new twilio.twiml.VoiceResponse();
 
   var chicago_tz    = moment.tz("America/Chicago");
-  var chicago_tz    = moment.tz("Pacific/Honolulu");
+  //var chicago_tz    = moment.tz("Pacific/Honolulu");
 
   var current_hour =  chicago_tz.format("H")
   var destination = "payphone@sipsorcery.com" //"harper@sipsorcery.com";
