@@ -1,0 +1,11 @@
+{
+  "name": "strangephone-functions",
+  "description": "Cloud Functions for Strange Phone",
+  "dependencies": {
+    "firebase-admin": "^4.1.2",
+    "firebase-functions": "^0.5",
+    "moment-timezone": "^0.5.13",
+    "twilio": "^3.4.0"
+  },
+  "private": true
+}
