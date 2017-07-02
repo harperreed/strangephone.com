@@ -35,6 +35,7 @@ Feel free to play around. My eventual goal is to make it very simple to do a "st
 * Create API to access the recordings and transcripts from strangephone.com
 * Clean up twilio parts
 * Maybe migrate to twilio sip trunk instead of sipsorcery? 
+* Move from github to firebase static hosting? 
 
 ### Thanks
 
