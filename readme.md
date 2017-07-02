@@ -22,6 +22,20 @@ I will affix the sticker to phone and take a photo of it and post it to the [str
 
 I would like to keep a constant stream of stickers and art going. Please help! 
 
+#### Code
+
+The website is in `/docs` and the firebase functions for handling twilio are in `/firebase`. 
+
+Feel free to play around. My eventual goal is to make it very simple to do a "strangephone" with any sip phone (payphone or not). Could be fun. 
+
+##### Code TODO
+
+* Make recording better
+* Store log of calls in and calls out - including update with recording and transcript
+* Create API to access the recordings and transcripts from strangephone.com
+* Clean up twilio parts
+* Maybe migrate to twilio sip trunk instead of sipsorcery? 
+
 ### Thanks
 
 Thanks for [Shawnimals](https://www.instagram.com/shawnimals/), [T-Money](https://www.instagram.com/tmoneydelarue/) and [Lauren Asta](https://www.instagram.com/lauren_asta/) for making our garage awesome. Also, talking about street art with these folks helped solidify my plans to make this payphone strange.  You should commission some work from them. 
