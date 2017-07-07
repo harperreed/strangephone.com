@@ -1,11 +1,6 @@
----
-layout: page
-title: About
-permalink: /about/
-menu: True
----
+# Strange Phone
 
-<img src="/assets/begin.jpg" class="hidden-sm-down" width="200" align="right" />
+<img src="http://strangephone.com/assets/begin.jpg" class="hidden-sm-down" width="200" align="right" />
 Strange Phone is a simple and normal project from Harper Reed. It is a payphone that is permenantly installed in his backyard. You can call this payphone by dialing: [+81 3 4589 4757](tel:+81345894757). Yes, this is a Tokyo, JP number. Tolls will most likely apply. 
 
 If you call within operating hours, maybe someone will answer the phone. You never know. 
@@ -26,6 +21,21 @@ If you want to contribute a sticker to the phone, send it to:
 I will affix the sticker to phone and take a photo of it and post it to the [strange_phone](http://instagram.com/strange_phone) insta. Obviously, I will use my own discretion on whether it fits, etc. I imagine most pieces will be awesome. 
 
 I would like to keep a constant stream of stickers and art going. Please help! 
+
+#### Code
+
+The website is in `/docs` and the firebase functions for handling twilio are in `/firebase`. 
+
+Feel free to play around. My eventual goal is to make it very simple to do a "strangephone" with any sip phone (payphone or not). Could be fun. 
+
+##### Code TODO
+
+* Make recording better
+* Store log of calls in and calls out - including update with recording and transcript
+* Create API to access the recordings and transcripts from strangephone.com
+* Clean up twilio parts
+* Maybe migrate to twilio sip trunk instead of sipsorcery? 
+* Move from github to firebase static hosting? 
 
 ### Thanks
 
