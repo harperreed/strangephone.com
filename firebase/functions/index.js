@@ -2,6 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const twilio = require('twilio');
 const moment = require("moment-timezone")
+const firebase = require('firebase')
 const PNF = require('google-libphonenumber').PhoneNumberFormat;
 const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 
@@ -9,9 +10,12 @@ const phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance()
 admin.initializeApp(functions.config().firebase);
 admin.database.enableLogging(true);
 
+
+/* Firebase call storage */
+
 store_outgoing_call = function(callSid) {
   var client = new twilio(functions.config().twilio.account.sid, functions.config().twilio.account.authtoken);
-  var d = new Date()
+  var d = new Date().toString()
 
   client.calls(callSid).fetch(function(err, call) {
     callOject = {}
@@ -35,6 +39,7 @@ store_outgoing_call = function(callSid) {
     callOject.priceUnit = call.priceUnit
     callOject.sid = call.sid
     callOject.startTime = call.startTime
+    callOject.timeStamp = firebase.database.ServerValue.TIMESTAMP
     
     callOject.direction = "outbound"
 
@@ -77,7 +82,7 @@ store_outgoing_call = function(callSid) {
 }
 
 store_incoming_call = function(body){
-  var d = new Date()
+  var d = new Date().toString()
   incoming_call = {}
   incoming_call.AccountSid = body.AccountSid;
   incoming_call.ApiVersion = body.ApiVersion;
@@ -94,6 +99,7 @@ store_incoming_call = function(body){
   incoming_call.CallerState = body.CallerState;
   incoming_call.CallerZip = body.CallerZip;
   incoming_call.DateStored = d
+  incoming_call.TimeStamp = firebase.database.ServerValue.TIMESTAMP
   incoming_call.DialCallDuration = body.DialCallDuration;
   incoming_call.DialCallSid = body.DialCallSid;
   incoming_call.DialCallStatus = body.DialCallStatus;
@@ -115,14 +121,13 @@ store_incoming_call = function(body){
   incoming_call.ToZip = body.ToZip;
 
 
-
   admin.database().ref('incoming-calls/' + incoming_call.CallSid).set(incoming_call);
 
 }
 
 store_voicemail = function(body){
   voicemail = {}
-  var d = new Date()
+  var d = new Date().toString()
   voicemail.AccountSid = body.AccountSid;
   voicemail.ApiVersion = body.ApiVersion;
   voicemail.CallSid = body.CallSid;
@@ -147,11 +152,13 @@ store_voicemail = function(body){
   voicemail.RecordingDuration = body.RecordingDuration;
   voicemail.RecordingSid = body.RecordingSid;
   voicemail.RecordingUrl = body.RecordingUrl;
+  voicemail.TimeStamp = firebase.database.ServerValue.TIMESTAMP
   voicemail.To = body.To;
   voicemail.ToCity = body.ToCity;
   voicemail.ToCountry = body.ToCountry;
   voicemail.ToState = body.ToState;
   voicemail.ToZip = body.ToZip;
+
 
 
   admin.database().ref('voicemail/' + voicemail.CallSid).set(voicemail);
@@ -164,6 +171,9 @@ store_voicemail = function(body){
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // })
+
+
+/* Twilio call handling helpers */ 
 
 exports.incoming = functions.https.onRequest((request, response) => {
   var twiml = new twilio.twiml.VoiceResponse();
@@ -220,12 +230,15 @@ exports.incoming = functions.https.onRequest((request, response) => {
     twiml.say(en_response, en_object)
     */
     twiml.play("https://strange-phone.firebaseapp.com/prompts/en/3.mp3")
+    /*
     var jp_response ="只今、ストレンジフォンは営業時間外です。 トーンの後にメッセージを残してください。";
     jp_object = {
       "voice":"alice",
       "language":"ja-JP"
     }
     twiml.say(jp_response, jp_object)
+    */
+    twiml.play("https://strange-phone.firebaseapp.com/prompts/en/3.mp3")
 
     var record_object = {
       "playBeep":true,
@@ -273,12 +286,16 @@ exports.post_call = functions.https.onRequest((request, response) => {
             */
             twiml.play("https://strange-phone.firebaseapp.com/prompts/en/2.mp3")
 
+
+            /*
             var jp_response ="トーンの後にメッセージを残してください。";
             jp_object = {
               "voice":"alice",
               "language":"ja-JP"
             }
             twiml.say(jp_response, jp_object)
+            */
+            twiml.play("https://strange-phone.firebaseapp.com/prompts/jp/2.mp3")
 
             var record_object = {
               "playBeep":true,
@@ -361,3 +378,18 @@ exports.outgoing = functions.https.onRequest((request, response) => {
   response.send(twiml.toString());
 })
 
+
+/* Web API functions */
+
+
+exports.recent_voicemails = functions.https.onRequest((request, response) => {
+  response.send("voicemails!");
+})
+
+exports.recent_incoming_calls = functions.https.onRequest((request, response) => {
+  response.send("incoming calls!");
+})
+
+exports.recent_outgoing_calls = functions.https.onRequest((request, response) => {
+  response.send("outgoing calls!");
+})
